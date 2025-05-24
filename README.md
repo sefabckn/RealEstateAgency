@@ -46,8 +46,6 @@ Real-Estate-Agency-DB/
 ├── README.md
 └── 
 ```
-### DataBase Diagram:
-  ![DataBase Diagram](visuals/screenshots/Screenshot-CreateViews.png)
 
 ---
 
