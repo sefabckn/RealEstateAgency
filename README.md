@@ -30,6 +30,22 @@ This project is a comprehensive **relational database design** for a real estate
 | `fact_PriceInformation` | Tracks property pricing and currency       |
 | `fact_SalesStatus`      | Tracks status: sold, rented, or available  |
 
+```md
+Real-Estate-Agency-DB/
+├── visuals/
+│   ├── diagram/
+│   │   ├── RealEstateAgencyDbDesign.png
+│   │   └── RealEstateAgencyDbDesignLight.png
+│   └── screenshots/
+│       ├── Screenshot-CreateDBandCreateTables.png
+│       ├── Screenshot-CreateFunction.png
+│       ├── Screenshot-CreateTrigger.png
+│       ├── Screenshot-CreateViews.png
+│       ├── Screenshot-CreatingStoredProcedures.png
+│       ├── Screenshot-InsertingSampleData.png
+├── README.md
+└── 
+```
 ---
 
 ## 🔍 Sample Views
@@ -45,6 +61,7 @@ JOIN dim_Addresses a ON p.AddressID = a.AddressID
 WHERE s.Availability = 'Available'
 GROUP BY a.City;
 ```
+  ![Create Views](visuals/screenshots/Screenshot-CreateViews.png)
 
 ### 💵 Average Price per Bedroom
 ```sql
@@ -90,6 +107,7 @@ RETURN
     JOIN fact_SalesStatus ss ON pd.PropertyID = ss.PropertyID
     WHERE ss.Availability = 'Available' AND a.City = @City;
 ```
+![Create Function](visuals/screenshots/Screenshot-CreateFunction.png)
 
 ### 📌 Stored Procedure: Update Property Availability
 ```sql
@@ -110,6 +128,7 @@ BEGIN
         PRINT 'Availability updated.';
 END;
 ```
+  ![Create Stored Procedures](visuals/screenshots/Screenshot-CreatingStoredProcedures.png)
 
 ## 🚨 Trigger: Auto Update ForSale Flag
 ```sql
@@ -125,6 +144,8 @@ BEGIN
     WHERE i.Availability = 'Sold';
 END;
 ```
+  ![Create Trigger](visuals/screenshots/Screenshot-CreateTrigger.png)
+
 
 💡 Features & Benefits
 Robust structure for a multi-region real estate business
