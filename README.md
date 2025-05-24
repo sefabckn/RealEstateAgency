@@ -30,6 +30,10 @@ This project is a comprehensive **relational database design** for a real estate
 | `fact_PriceInformation` | Tracks property pricing and currency       |
 | `fact_SalesStatus`      | Tracks status: sold, rented, or available  |
 
+### Diagram
+   
+  ![Diagram](visuals/diagram/RealEstateAgencyDbDesignLight.png)
+
 ```md
 Real-Estate-Agency-DB/
 ├── visuals/
